@@ -5,32 +5,7 @@ This repo is an example of deploying a basic Nodejs app on AWS using Ansible. In
 Login to your AWS and create EC2 instance running Ubuntu 18.02. When done, follow instructions on creating key-pair for ssh login and giving it the right permissions. In this example we assume you saved your ssh key in the home folder `/home/bling/eneza/eneza.pem`
 
 ## Clone this repo
-Clone this repo on your local working environment. This repo contains community cookbook for installing NVM. When you run bash command `tree`, the folder should look like this:
-.
-├── ansible
-│   ├── ansible-role-nvm
-│   │   ├── defaults
-│   │   │   └── main.yml
-│   │   ├── LICENSE
-│   │   ├── README.md
-│   │   └── tasks
-│   │       ├── main.yml
-│   │       └── nvm.yml
-│   ├── deploy.yml
-│   ├── distro_update.yml
-│   ├── install_node_nginx.yml
-│   ├── inventory.yml
-│   ├── ssl_certificate.yml
-│   └── templates
-│       └── nginx.conf.j2
-├── appjs
-│   ├── db.json
-│   ├── json-server-http.js
-│   └── package.json
-├── cert
-├── LICENSE.md
-├── README.md
-└── setup.sh
+Clone this repo on your local working environment. This repo contains community cookbook for installing NVM. 
 
 # Running the playbooks
 Find `setup.sh` and make it executable using `bash` command `chmod +x setup.sh`. When ready to deploy, execute the script to deploy your nodejs app. The following represents the key steps:
