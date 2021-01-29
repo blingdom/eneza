@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Corona"
+    }
+  ],
+  "authentication": [
+    {
+      "strategy": "local",
+      "email": "diaspora@corona.kenya",
+      "password": "Y_tstD@1",
+      "id": 1
+    },
+    {
+      "strategy": "local",
+      "email": "masai@corona.kenya",
+      "password": "fm3m3!F",
+      "id": 2
+    },
+    {
+      "strategy": "local",
+      "email": "ongata@corona.kenya",
+      "password": "c38ch&G",
+      "id": 3
+    },
+    {
+      "strategy": "local",
+      "email": "rongai@corona.kenya",
+      "password": "zxd6Tx+",
+      "id": 4
+    }
+  ]
+}

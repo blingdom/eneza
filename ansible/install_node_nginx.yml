@@ -1,0 +1,42 @@
+## This playbook installs Node for Nginx
+
+- name: Install curl, wget, nginx and node
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+
+  tasks:
+    - name: Install curl
+      apt:
+        name: curl
+        state: present
+
+    - name: Install wget
+      apt:
+        name: wget
+        state: present
+
+- name: Create nvm
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+
+  roles:
+    - role: ansible-role-nvm
+      nodejs_version: '10.16.0'
+
+- name: Install nginx
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start Nnginx
+      service:
+        name: nginx
+        state: started

@@ -1,0 +1,15 @@
+## This optional (Ubuntu)
+- name: Upgrade distro packages
+  hosts: all
+  become: yes
+  remote_user: root
+
+  tasks:
+    - name: Upgrade all packages to the latest version
+      apt:
+        name: "*"
+        state: latest
+
+    - name: Update all packages to the latest version
+      apt:
+        upgrade: dist
